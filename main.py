@@ -12,10 +12,7 @@ from kivy.core.audio import SoundLoader
 from kivy.properties import ObjectProperty, StringProperty
 from kivy.uix.screenmanager import ScreenManager, Screen
 from kivy.uix.filechooser import FileChooserListView
-import pygame
 
-
-pygame.mixer.init()
 
 class FirstWindow(Screen):
     pass
