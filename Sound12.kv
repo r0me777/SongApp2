@@ -1,0 +1,69 @@
+<WindowManger>:
+    FirstWindow:
+    SecondWindow:
+        name: "second"
+
+
+<FirstWindow>:
+    name: "first"
+    AppLayout:
+        orientation: "vertical"
+        SongText:
+            size_hint: 1,0.35
+        PausePlay:
+            size_hint: 1,0.1
+        ScrollView:
+            size_hint_y: .73
+            do_scroll_x: False
+            do_scroll_y: True
+            PlayList:
+
+        AddDeleteShuffle:
+            size_hint: 1,0.2
+
+<SecondWindow>:
+    name: "second"
+    FileLayout:
+
+
+
+<SongText>:
+    Label:
+        id: songtitle
+        text: "Song Title"
+<PausePlay>:
+    Button:
+        id: play
+        text: "Play"
+    Button:
+        id: pause
+        text: "Pause"
+
+<PlayList>:
+    size:(root.width, root.height)
+    size_hint_x: 1
+    size_hint_y: None
+    cols: 1
+    height: self.minimum_height
+    row_default_height: 50
+    row_force_default: True
+
+
+<AddDeleteShuffle>:
+    BoxLayout:
+        Button:
+            text: "Shuffle"
+        Button:
+            text: "Delete"
+        Button:
+            text: "Add"
+            on_release: app.root.current = "second"
+
+<FileLayout>:
+    cols: 1
+    Button:
+        size_hint: 1,0.1
+        text: "back"
+        on_release: app.root.current = "first"
+
+    FileChooserListView:
