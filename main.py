@@ -42,11 +42,11 @@ class SongText(BoxLayout):
 class AppLayout(BoxLayout):
     pass
 
-class soundApp(App):
+class SoundApp(App):
     def build(self):
         return WindowManger()
 
 
 
 if __name__ == "__main__":
-    soundApp().run()
+    SoundApp().run()
